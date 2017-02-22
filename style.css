@@ -1,0 +1,201 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*-------------------------------------
+	Theme colors
+-------------------------------------*/
+/* usage 
+@media screen and (min-width: 600px) and (max-width: 799px) {
+  // columns & distance
+  @include flexgrid(2, 1rem);
+}
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  @include flexgrid(3, 1rem);
+}
+@media screen and (min-width: 1000px) {
+  @include flexgrid(4, 1rem);
+}
+*/
+/* -------------- Examples -------------- */
+@media (min-width: 320px) {
+  /* styles for small mobile viewport (min-width: 320px)*/ }
+
+@media (min-width: 375px) {
+  /* styles for snormal mobile viewport (min-width: 375px)*/ }
+
+@media (min-width: 425px) {
+  /* styles for normal mobile viewport (min-width: 425px)*/ }
+
+@media (min-width: 600px) {
+  /* styles for tablet viewport (min-width: 600px)*/ }
+
+@media (min-width: 768px) {
+  /* styles for tablet viewport (min-width: 768px)*/ }
+
+@media (min-width: 840px) {
+  /* styles for tablet viewport (min-width: 840px)*/ }
+
+@media (min-width: 1024px) {
+  /* styles for laptop viewport (min-width: 1024px)*/ }
+
+@media (4k) {
+  /* styles for 4k viewport (min-width: 2560px)*/ }
+
+/* change gutter width depends to design*/
+html, body {
+  height: 100%;
+  background-color: #008541; }
+
+body {
+  background-image: url("/assets/svg/bgr_element.svg"), url("/assets/svg/bgr_element.svg");
+  background-repeat: no-repeat no-repeat, no-repeat;
+  background-size: 50%;
+  background-position: -45% 0, 130% 100%; }
+
+.page {
+  min-height: 100%;
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+_:-ms-fullscreen, :root .page {
+  height: 100%; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page {
+    height: 100%; } }
+
+.footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer__logo-wrapper {
+    width: 50%;
+    max-width: 218px; }
+  .footer__logo {
+    display: block;
+    height: 0;
+    /* collapse the container's height */
+    width: 100%;
+    /* specify any width you want (a percentage value, basically) */
+    padding-top: 27.11%;
+    position: relative;
+    /* create positioning context for svg */ }
+    .footer__logo svg {
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+_:-ms-fullscreen, :root .footer {
+  min-height: 86px; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .footer {
+    min-height: 86px; } }
+
+.language__block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+
+.language__item {
+  color: white;
+  padding: 0 16px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.language__link {
+  color: white;
+  padding: 0 4px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+  .language__link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width .3s; }
+  .language__link:hover::after {
+    width: 100%; }
+
+.video__wrapper {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  overflow: hidden; }
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+_:-ms-fullscreen, :root .video {
+  min-height: 450px; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .video {
+    min-height: 450px; } }
